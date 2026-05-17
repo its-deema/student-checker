@@ -6,7 +6,7 @@ def build_report(student_name, score, status, advice):
 Student Name: {student_name}
 Score: {score}
 Status: {status}
-Passed: { "True" if  100 <= score >= 50 else "False"}
+Passed: {"True" if 50 <= score <= 100 else "False"}
 Advice: {advice}
 """
     return report
