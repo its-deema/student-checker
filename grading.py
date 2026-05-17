@@ -15,10 +15,3 @@ def avgrage_score(scores):
     for score in scores:
         total += score
     return total / len(scores)
-    
-
-# def highest_score(scores):
-#     return max(scores) 
-
-# def lowest_score(scores):
-#     return min(scores)
