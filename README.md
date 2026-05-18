@@ -14,7 +14,7 @@ The system analyzes student scores, assigns a risk level, provides improvement a
 ### 📸 Screenshots 
 <p align="center">
 <img  height="543" alt="Screenshot of the output" src="https://github.com/user-attachments/assets/b790f9f6-cf41-4edf-8760-606a920292f0" />
-"><br>
+<br>
 <strong>Low Risk student</strong>
 </p>
 
