@@ -12,18 +12,10 @@ The system analyzes student scores, assigns a risk level, provides improvement a
 - Handles invalid score input
 
 ### 📸 Screenshots 
-<p align="center">
+<p align="left">
 <img  height="543" alt="Screenshot of the output" src="https://github.com/user-attachments/assets/b790f9f6-cf41-4edf-8760-606a920292f0" />
 <br>
 <strong>Low Risk student</strong>
 </p>
 
-### Team Members
-- Reema
-- Rawan
-- Ahad
-- Shatha
-- Lama
-- Deema
-- Modi
 
