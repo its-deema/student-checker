@@ -1,9 +1,8 @@
-from grading import is_valid_score, classify_score,avgrage_score
-from report_writer import save_report, build_report, score_report, advice_writer
+from grading import is_valid_score, classify_score,get_risk_level , get_support_advice
+from report_writer import save_report, build_report, risk_report
 
 
-score_array = []
-
+students = []
 # loops until the user enter 'q'
 while True:
 
@@ -24,17 +23,26 @@ while True:
                 print("score must be between 0 and 100")
             
             else:
-                score_array.append(score)
-                status = classify_score(score)
-                advice = advice_writer(score)
-                report = build_report(student_name, score, status,advice)
+                grade = classify_score(score)
+                advice = get_support_advice(score)
+                risk_level = get_risk_level(score)
+                report = build_report(student_name, score, grade, advice, risk_level)
                 filename = save_report(student_name, report)
-
+                student_dic = {
+                    "name" : student_name,
+                    "score" : score,
+                    "grade" : grade,
+                    "passed" : "True" if 50 <= score <= 100 else "False",
+                    "risk_level" : risk_level,
+                    "advice" : advice
+                }
+                students.append(student_dic)
                 print(report)
+                print(risk_report(students))
+
                 print(f"report saved to: {filename}")
     except ValueError:
         print("Invalid input, Score must be a number.")
 
-print(score_report(score_array))
 
 

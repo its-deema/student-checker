@@ -1,32 +1,26 @@
-from grading import avgrage_score
+from grading import avgrage_score, count_risk_levels
 
-def build_report(student_name, score, status, advice):
+def build_report(student_name, score, grade, advice, risk_level):
     report= f"""\nStudent Performance Report
 --------------------------
 Student Name: {student_name}
 Score: {score}
-Status: {status}
+Grade: {grade}
 Passed: {"True" if 50 <= score <= 100 else "False"}
+Risk Level: {risk_level}
 Advice: {advice}
 """
     return report
 
-def advice_writer(score):
-    if score >= 85:
-        return "Keep it up the great work and start exploring advanced exercises"
-    elif score >=70:
-        return "Keep practicing and fix small mistakes"
-    elif score >= 50:
-        return "you passed, but more practice will help"
-    else:
-        return "Review the basics and seek extra support"
 
-def score_report(score_array):
-    report= f"""\nScore Report 
+def risk_report(students):
+    high_count, medium_count, low_count = count_risk_levels(students)
+
+    report= f"""\nRisk Report 
 --------------------------
-Average Score: {avgrage_score(score_array)}
-Highest Score: {max(score_array)}
-Lowest Score:" {min(score_array)}
+High Count: {high_count}
+Medium Count: {medium_count}
+Low Count: {low_count}
 """
     return report
 

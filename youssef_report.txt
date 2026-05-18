@@ -1,0 +1,9 @@
+
+Student Performance Report
+--------------------------
+Student Name: Youssef
+Score: 60.0
+Grade: Passed
+Passed: True
+Risk Level: Medium
+Advice: The student should practice more
